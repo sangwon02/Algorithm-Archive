@@ -19,7 +19,8 @@ for i in range(n):
                 dp[i][j] = 1 # 첫 번째 테두리에서는 1이 최대 크기니깐
                 
             else:
-                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + 1
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1 
+                # 왼쪽, 위뿐만이 아니라 대각선도 고려해야함!
 
 answer = 0
 
